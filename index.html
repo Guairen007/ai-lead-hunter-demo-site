@@ -4,23 +4,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex" />
-    <title>Demo Beauty Studio | Mobile Business Page Demo</title>
+    <title>Luna Nail & Beauty | Mobile Business Page Demo</title>
     <style>
       :root {
         color-scheme: light;
-        --ink: #182521;
-        --muted: #6f746e;
-        --cream: #fffaf2;
-        --cream-2: #f7efe4;
-        --blush: #edd5cf;
-        --blush-2: #f8e9e4;
-        --champagne: #c9a66b;
-        --champagne-soft: #f3e4c7;
-        --green: #163b34;
-        --green-2: #23564c;
-        --line: rgba(43, 38, 31, 0.12);
-        --shadow: 0 26px 80px rgba(32, 24, 15, 0.16);
-        --soft-shadow: 0 14px 34px rgba(32, 24, 15, 0.08);
+        --ink: #17231f;
+        --muted: #6d746d;
+        --cream: #fff8ef;
+        --porcelain: #fffdf9;
+        --blush: #f0d9d5;
+        --rose: #b86b78;
+        --nude: #dcc0a8;
+        --champagne: #caa66b;
+        --champagne-light: #f4e5c5;
+        --green: #143c34;
+        --green-soft: #e9f2ed;
+        --line: rgba(48, 37, 26, 0.12);
+        --shadow: 0 26px 90px rgba(39, 28, 18, 0.18);
+        --soft-shadow: 0 16px 38px rgba(39, 28, 18, 0.09);
       }
 
       * {
@@ -35,8 +36,9 @@
         margin: 0;
         min-height: 100vh;
         background:
-          radial-gradient(circle at 50% -10%, rgba(237, 213, 207, 0.72), transparent 34%),
-          linear-gradient(180deg, #fffaf2 0%, #f5eee5 52%, #eef4ef 100%);
+          radial-gradient(circle at 18% 0%, rgba(240, 217, 213, 0.82), transparent 34%),
+          radial-gradient(circle at 82% 4%, rgba(244, 229, 197, 0.78), transparent 30%),
+          linear-gradient(180deg, #fff8ef 0%, #f5ece3 48%, #edf4ee 100%);
         color: var(--ink);
         font-family:
           Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -48,103 +50,227 @@
         text-decoration: none;
       }
 
-      .page {
-        width: min(100%, 520px);
+      .shell {
+        width: min(100%, 526px);
         margin: 0 auto;
-        padding: 20px 14px 34px;
+        padding: 18px 13px 34px;
       }
 
       .phone {
         overflow: hidden;
-        border: 1px solid rgba(201, 166, 107, 0.34);
-        border-radius: 34px;
-        background: rgba(255, 250, 242, 0.9);
+        border: 1px solid rgba(202, 166, 107, 0.38);
+        border-radius: 36px;
+        background: rgba(255, 253, 249, 0.92);
         box-shadow: var(--shadow);
       }
 
       .hero {
         position: relative;
-        padding: 28px 22px 24px;
+        padding: 22px 18px 18px;
         background:
-          linear-gradient(145deg, rgba(255, 255, 255, 0.88), rgba(248, 233, 228, 0.86)),
+          linear-gradient(155deg, rgba(255, 255, 255, 0.86), rgba(248, 232, 226, 0.9)),
           var(--cream);
       }
 
-      .hero:before {
-        content: "";
-        position: absolute;
-        inset: 14px;
-        border: 1px solid rgba(201, 166, 107, 0.28);
-        border-radius: 26px;
-        pointer-events: none;
-      }
-
-      .hero-inner {
+      .hero-panel {
         position: relative;
-        z-index: 1;
+        overflow: hidden;
+        padding: 21px;
+        border: 1px solid rgba(202, 166, 107, 0.28);
+        border-radius: 30px;
+        background:
+          linear-gradient(145deg, rgba(255, 255, 255, 0.72), rgba(255, 248, 239, 0.52)),
+          rgba(255, 255, 255, 0.62);
       }
 
-      .studio-mark {
-        width: 64px;
-        height: 64px;
+      .hero-grid {
+        display: grid;
+        gap: 20px;
+      }
+
+      .logo {
+        width: 58px;
+        height: 58px;
         display: grid;
         place-items: center;
-        margin-bottom: 18px;
-        border: 1px solid rgba(201, 166, 107, 0.48);
-        border-radius: 22px;
-        background:
-          linear-gradient(145deg, rgba(255, 255, 255, 0.72), rgba(243, 228, 199, 0.62)),
-          #fff;
+        border: 1px solid rgba(202, 166, 107, 0.54);
+        border-radius: 20px;
+        background: linear-gradient(145deg, #fffdfa, #f5e4c2);
         color: var(--green);
         font-family: Georgia, "Times New Roman", serif;
-        font-size: 25px;
+        font-size: 22px;
         font-weight: 700;
         box-shadow: var(--soft-shadow);
       }
 
       .eyebrow {
-        margin: 0 0 9px;
-        color: var(--green-2);
+        margin: 16px 0 8px;
+        color: var(--green);
         font-size: 12px;
-        font-weight: 800;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
+        font-weight: 880;
+        letter-spacing: 0.12em;
       }
 
       h1 {
+        max-width: 330px;
         margin: 0;
         color: #17231f;
         font-family: Georgia, "Times New Roman", serif;
-        font-size: 41px;
+        font-size: 43px;
         font-weight: 700;
-        line-height: 0.96;
+        line-height: 0.97;
         letter-spacing: 0;
       }
 
-      .subtitle {
-        max-width: 420px;
-        margin: 14px 0 0;
-        color: #4d564f;
-        font-size: 15px;
-        line-height: 1.65;
+      .tag {
+        display: inline-flex;
+        margin-top: 13px;
+        padding: 8px 11px;
+        border: 1px solid rgba(20, 60, 52, 0.14);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.62);
+        color: #334d45;
+        font-size: 12px;
+        font-weight: 780;
       }
 
-      .audience {
-        display: inline-flex;
-        margin-top: 18px;
-        padding: 9px 12px;
-        border: 1px solid rgba(35, 86, 76, 0.18);
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.64);
-        color: var(--green);
+      .subtitle-line {
+        margin: 12px 0 0;
+        color: var(--champagne);
         font-size: 12px;
-        font-weight: 760;
-        line-height: 1.35;
+        font-weight: 880;
+        line-height: 1.45;
+      }
+
+      .headline {
+        margin: 16px 0 0;
+        color: #24332e;
+        font-size: 18px;
+        font-weight: 880;
+        line-height: 1.28;
+      }
+
+      .subcopy {
+        margin: 9px 0 0;
+        color: #616b63;
+        font-size: 14px;
+        line-height: 1.62;
+      }
+
+      .hero-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .primary-btn,
+      .secondary-btn {
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 18px;
+        font-size: 13px;
+        font-weight: 900;
+      }
+
+      .primary-btn {
+        background: linear-gradient(180deg, var(--green), #0e2b25);
+        color: #fffaf2;
+        box-shadow: 0 16px 28px rgba(20, 60, 52, 0.25);
+      }
+
+      .secondary-btn {
+        border: 1px solid rgba(202, 166, 107, 0.48);
+        background: rgba(255, 255, 255, 0.72);
+        color: var(--green);
+      }
+
+      .beauty-visual {
+        position: relative;
+        min-height: 178px;
+        border: 1px solid rgba(202, 166, 107, 0.24);
+        border-radius: 28px;
+        background:
+          radial-gradient(circle at 24% 18%, rgba(255, 255, 255, 0.92), transparent 26%),
+          linear-gradient(145deg, #f8dfd8, #fff8ee 48%, #dae9df);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), var(--soft-shadow);
+      }
+
+      .appointment-card {
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        padding: 13px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        border-radius: 22px;
+        background: rgba(255, 253, 249, 0.78);
+        backdrop-filter: blur(10px);
+      }
+
+      .appointment-card strong {
+        display: block;
+        color: var(--green);
+        font-size: 13px;
+        font-weight: 900;
+      }
+
+      .appointment-card span {
+        display: block;
+        margin-top: 5px;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.45;
+      }
+
+      .polish {
+        position: absolute;
+        width: 46px;
+        height: 94px;
+        border-radius: 18px 18px 21px 21px;
+        box-shadow: 0 18px 26px rgba(57, 38, 27, 0.14);
+      }
+
+      .polish:before {
+        content: "";
+        position: absolute;
+        left: 13px;
+        top: -20px;
+        width: 20px;
+        height: 29px;
+        border-radius: 8px 8px 4px 4px;
+        background: #1f2d28;
+      }
+
+      .polish:after {
+        content: "";
+        position: absolute;
+        left: 11px;
+        top: 20px;
+        width: 7px;
+        height: 38px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      .polish.one {
+        top: 40px;
+        right: 76px;
+        background: linear-gradient(180deg, #f2c7c8, #b96b78);
+        transform: rotate(-9deg);
+      }
+
+      .polish.two {
+        top: 28px;
+        right: 28px;
+        background: linear-gradient(180deg, #f2dfc0, #c9a66b);
+        transform: rotate(8deg);
       }
 
       .quick-actions {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 11px;
         padding: 18px;
         background: #fffdf9;
@@ -152,64 +278,83 @@
       }
 
       .action {
-        min-height: 62px;
+        min-height: 58px;
         display: flex;
         align-items: center;
-        gap: 11px;
-        padding: 12px;
-        border: 1px solid rgba(43, 38, 31, 0.1);
-        border-radius: 19px;
-        background: linear-gradient(180deg, #ffffff, #fffaf5);
-        box-shadow: 0 10px 22px rgba(32, 24, 15, 0.06);
-        font-size: 14px;
-        font-weight: 840;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 11px 13px;
+        border: 1px solid rgba(48, 37, 26, 0.1);
+        border-radius: 20px;
+        background: linear-gradient(180deg, #fff, #fff8f1);
+        box-shadow: 0 12px 24px rgba(39, 28, 18, 0.07);
         transition:
-          transform 160ms ease,
-          border-color 160ms ease,
-          box-shadow 160ms ease;
+          transform 150ms ease,
+          border-color 150ms ease,
+          box-shadow 150ms ease;
       }
 
       .action:hover {
         transform: translateY(-1px);
-        border-color: rgba(201, 166, 107, 0.46);
-        box-shadow: 0 14px 28px rgba(32, 24, 15, 0.1);
+        border-color: rgba(202, 166, 107, 0.45);
+        box-shadow: 0 16px 30px rgba(39, 28, 18, 0.1);
       }
 
-      .badge {
+      .action-left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+      }
+
+      .icon {
         width: 34px;
         height: 34px;
         display: grid;
         flex: none;
         place-items: center;
-        border-radius: 13px;
+        border-radius: 14px;
         color: #fff;
         font-family: Georgia, "Times New Roman", serif;
         font-size: 14px;
         font-weight: 700;
       }
 
-      .badge.book {
-        background: #b86a79;
+      .icon.book {
+        background: #b86b78;
       }
 
-      .badge.services {
-        background: var(--champagne);
+      .icon.services {
+        background: #c9a66b;
       }
 
-      .badge.social {
-        background: #79675b;
+      .icon.instagram {
+        background: #80685f;
       }
 
-      .badge.menu {
-        background: #9b7a45;
+      .icon.gallery {
+        background: #c49b91;
       }
 
-      .badge.map {
-        background: var(--green-2);
+      .icon.location {
+        background: #23564c;
       }
 
-      .badge.contact {
-        background: var(--green);
+      .icon.contact {
+        background: #143c34;
+      }
+
+      .action strong {
+        display: block;
+        color: #1e2d27;
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      .chevron {
+        color: var(--champagne);
+        font-size: 20px;
+        font-weight: 300;
       }
 
       .section {
@@ -217,181 +362,228 @@
         border-top: 1px solid var(--line);
       }
 
-      .section.alt {
-        background: rgba(255, 255, 255, 0.52);
+      .section.soft {
+        background: rgba(255, 255, 255, 0.54);
       }
 
-      .section-heading {
+      .section-head {
         display: flex;
         align-items: end;
         justify-content: space-between;
         gap: 12px;
-        margin-bottom: 13px;
+        margin-bottom: 14px;
       }
 
       h2 {
         margin: 0;
         color: #17231f;
         font-size: 18px;
-        font-weight: 900;
+        font-weight: 940;
         letter-spacing: 0;
       }
 
-      .small-label {
+      .kicker {
         color: var(--champagne);
         font-size: 11px;
         font-weight: 900;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.13em;
         text-transform: uppercase;
         white-space: nowrap;
       }
 
-      .service-grid {
+      .service-list {
         display: grid;
-        gap: 12px;
+        gap: 11px;
       }
 
-      .service-card {
-        position: relative;
-        overflow: hidden;
-        padding: 16px 15px;
-        border: 1px solid rgba(43, 38, 31, 0.1);
+      .service {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 12px;
+        padding: 14px;
+        border: 1px solid rgba(48, 37, 26, 0.1);
         border-radius: 22px;
         background:
-          linear-gradient(130deg, rgba(255, 255, 255, 0.94), rgba(255, 250, 245, 0.82)),
+          linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(255, 248, 241, 0.82)),
           #fff;
         box-shadow: var(--soft-shadow);
       }
 
-      .service-card:after {
-        content: "";
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        width: 38px;
-        height: 4px;
-        border-radius: 999px;
-        background: rgba(201, 166, 107, 0.52);
+      .service-mark {
+        width: 42px;
+        height: 42px;
+        display: grid;
+        place-items: center;
+        border-radius: 16px;
+        background: var(--green-soft);
+        color: var(--green);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 17px;
+        font-weight: 700;
       }
 
-      .service-card strong {
+      .service strong {
         display: block;
-        padding-right: 50px;
         color: #1d2b26;
         font-size: 15px;
-        font-weight: 900;
+        font-weight: 920;
       }
 
-      .service-card p {
-        margin: 8px 0 0;
+      .service p {
+        margin: 5px 0 0;
         color: var(--muted);
         font-size: 13px;
-        line-height: 1.58;
+        line-height: 1.52;
       }
 
-      .why-grid {
+      .trust-grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 10px;
       }
 
-      .why-card {
-        min-height: 114px;
-        padding: 13px 10px;
-        border: 1px solid rgba(35, 86, 76, 0.14);
-        border-radius: 20px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(238, 247, 243, 0.76));
+      .trust {
+        min-height: 106px;
+        padding: 13px;
+        border: 1px solid rgba(20, 60, 52, 0.13);
+        border-radius: 21px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(236, 245, 240, 0.78));
       }
 
-      .why-card span {
+      .trust span {
         display: block;
-        width: 28px;
-        height: 28px;
+        width: 26px;
+        height: 26px;
         margin-bottom: 12px;
-        border-radius: 11px;
+        border-radius: 10px;
         background: var(--green);
-        color: var(--champagne-soft);
-        font-size: 13px;
+        color: var(--champagne-light);
+        font-size: 12px;
         font-weight: 900;
-        line-height: 28px;
+        line-height: 26px;
         text-align: center;
       }
 
-      .why-card strong {
+      .trust strong {
         display: block;
         color: #1d2b26;
-        font-size: 12px;
+        font-size: 13px;
         line-height: 1.32;
       }
 
-      .use-cases {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 9px;
+      .info-list {
+        display: grid;
+        gap: 10px;
       }
 
-      .chip {
-        padding: 9px 11px;
-        border: 1px solid rgba(201, 166, 107, 0.3);
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.68);
-        color: #35453f;
+      .info-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 13px 14px;
+        border: 1px solid rgba(48, 37, 26, 0.1);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.72);
+      }
+
+      .info-row span {
+        color: var(--muted);
         font-size: 13px;
         font-weight: 760;
       }
 
-      .booking-note,
-      .contact-note {
-        margin: 0;
-        padding: 15px;
-        border: 1px solid rgba(35, 86, 76, 0.16);
-        border-radius: 22px;
-        background: linear-gradient(140deg, rgba(255, 255, 255, 0.88), rgba(239, 247, 242, 0.78));
-        color: #31423c;
-        font-size: 14px;
-        font-weight: 650;
-        line-height: 1.6;
+      .info-row strong {
+        color: #1d2b26;
+        font-size: 13px;
+        text-align: right;
+      }
+
+      .mood-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .swatch {
+        min-height: 104px;
+        display: flex;
+        align-items: end;
+        padding: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        border-radius: 24px;
+        box-shadow: var(--soft-shadow);
+      }
+
+      .swatch span {
+        padding: 7px 9px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.72);
+        color: #20342e;
+        font-size: 12px;
+        font-weight: 860;
+      }
+
+      .soft-pink {
+        background: linear-gradient(145deg, #f7d8d9, #fff5ef);
+      }
+
+      .nude-gloss {
+        background: linear-gradient(145deg, #dfc2a8, #fff6eb);
+      }
+
+      .champagne {
+        background: linear-gradient(145deg, #f1ddb3, #c9a66b);
+      }
+
+      .deep-green {
+        background: linear-gradient(145deg, #2a6156, #102c27);
+      }
+
+      .deep-green span {
+        color: #f8ead0;
+        background: rgba(20, 60, 52, 0.7);
       }
 
       .final-cta {
-        padding: 24px 18px 20px;
+        padding: 25px 18px 21px;
         background:
-          linear-gradient(140deg, rgba(22, 59, 52, 0.96), rgba(35, 86, 76, 0.94)),
+          linear-gradient(145deg, rgba(20, 60, 52, 0.98), rgba(12, 35, 30, 0.98)),
           var(--green);
-        color: #fff;
+        color: #fffaf2;
       }
 
       .final-cta h2 {
-        color: #fff;
+        color: #fffaf2;
         font-family: Georgia, "Times New Roman", serif;
-        font-size: 28px;
+        font-size: 30px;
+        font-weight: 700;
         line-height: 1.05;
       }
 
       .final-cta p {
         margin: 10px 0 18px;
-        color: rgba(255, 255, 255, 0.76);
+        color: rgba(255, 250, 242, 0.76);
         font-size: 14px;
         line-height: 1.58;
       }
 
       .cta-button {
+        min-height: 54px;
         display: flex;
-        min-height: 52px;
         align-items: center;
         justify-content: center;
-        border-radius: 18px;
-        background: linear-gradient(180deg, #f4dfb5, #d3ad6b);
-        color: #17362f;
+        border-radius: 19px;
+        background: linear-gradient(180deg, #f4dfb5, #caa66b);
+        color: #143c34;
         font-size: 14px;
-        font-weight: 920;
-        box-shadow: 0 16px 34px rgba(0, 0, 0, 0.18);
+        font-weight: 940;
+        box-shadow: 0 18px 34px rgba(0, 0, 0, 0.2);
       }
 
-      .micro-footer {
-        padding: 14px 18px 18px;
-        background: var(--green);
-        color: rgba(255, 255, 255, 0.62);
+      .footer-note {
+        padding: 15px 18px 18px;
+        background: #0c231e;
+        color: rgba(255, 250, 242, 0.6);
         font-size: 12px;
         text-align: center;
       }
@@ -402,134 +594,184 @@
           place-items: start center;
         }
 
-        .page {
-          padding-top: 40px;
-          padding-bottom: 56px;
+        .shell {
+          padding-top: 38px;
+          padding-bottom: 58px;
         }
 
         .phone {
-          border-radius: 38px;
+          border-radius: 40px;
         }
       }
 
-      @media (max-width: 370px) {
+      @media (min-width: 450px) {
+        .hero-grid {
+          grid-template-columns: 1.05fr 0.95fr;
+          align-items: end;
+        }
+      }
+
+      @media (max-width: 374px) {
         h1 {
-          font-size: 35px;
+          font-size: 36px;
         }
 
-        .quick-actions {
-          grid-template-columns: 1fr;
-        }
-
-        .why-grid {
+        .hero-actions,
+        .trust-grid,
+        .mood-grid {
           grid-template-columns: 1fr;
         }
       }
     </style>
   </head>
   <body>
-    <main class="page">
-      <article class="phone" aria-label="Demo Beauty Studio mobile business page">
+    <main class="shell">
+      <article class="phone" aria-label="Luna Nail & Beauty mobile page">
         <header class="hero">
-          <div class="hero-inner">
-            <div class="studio-mark" aria-hidden="true">DB</div>
-            <p class="eyebrow">Mobile Business Page Demo</p>
-            <h1>Demo Beauty Studio</h1>
-            <p class="subtitle">
-              A clean mobile hub for bookings, services, social links, maps, and customer actions.
-            </p>
-            <p class="audience">
-              Designed for salons, beauty studios, barbers, restaurants, and local businesses.
-            </p>
+          <div class="hero-panel">
+            <div class="hero-grid">
+              <div>
+                <div class="logo" aria-hidden="true">LN</div>
+                <p class="eyebrow">Premium mobile link page</p>
+                <h1>Luna Nail & Beauty</h1>
+                <p class="subtitle-line">
+                  Premium mobile link page for bookings, services, location, and social traffic.
+                </p>
+                <p class="tag">Nail Studio 路 Beauty Lounge 路 Austin</p>
+                <p class="headline">Book your next beauty visit in one clean mobile page.</p>
+                <p class="subcopy">
+                  Services, booking, location, Instagram, and contact actions 鈥?all in one
+                  polished link.
+                </p>
+                <div class="hero-actions">
+                  <a class="primary-btn" href="#booking">Book Appointment</a>
+                  <a class="secondary-btn" href="#services">View Services</a>
+                </div>
+              </div>
+              <div class="beauty-visual" aria-hidden="true">
+                <div class="polish one"></div>
+                <div class="polish two"></div>
+                <div class="appointment-card">
+                  <strong>Next opening today</strong>
+                  <span>Manicure, pedicure, beauty add-ons, and easy contact in one tap.</span>
+                </div>
+              </div>
+            </div>
           </div>
         </header>
 
         <nav class="quick-actions" aria-label="Quick actions">
-          <a class="action" href="#booking"><span class="badge book">B</span> Book Now</a>
-          <a class="action" href="#services"><span class="badge services">S</span> Services</a>
-          <a class="action" href="#instagram"><span class="badge social">I</span> Instagram</a>
-          <a class="action" href="#menu"><span class="badge menu">M</span> Menu</a>
-          <a class="action" href="#map"><span class="badge map">P</span> Map</a>
-          <a class="action" href="#contact"><span class="badge contact">C</span> Contact</a>
+          <a class="action" href="#booking">
+            <span class="action-left"><span class="icon book">B</span><strong>Book Now</strong></span>
+            <span class="chevron">鈥?/span>
+          </a>
+          <a class="action" href="#services">
+            <span class="action-left"><span class="icon services">S</span><strong>Services</strong></span>
+            <span class="chevron">鈥?/span>
+          </a>
+          <a class="action" href="#instagram">
+            <span class="action-left"><span class="icon instagram">I</span><strong>Instagram</strong></span>
+            <span class="chevron">鈥?/span>
+          </a>
+          <a class="action" href="#gallery">
+            <span class="action-left"><span class="icon gallery">G</span><strong>Gallery</strong></span>
+            <span class="chevron">鈥?/span>
+          </a>
+          <a class="action" href="#location">
+            <span class="action-left"><span class="icon location">L</span><strong>Location</strong></span>
+            <span class="chevron">鈥?/span>
+          </a>
+          <a class="action" href="#contact">
+            <span class="action-left"><span class="icon contact">C</span><strong>Contact</strong></span>
+            <span class="chevron">鈥?/span>
+          </a>
         </nav>
 
         <section class="section" id="services">
-          <div class="section-heading">
-            <h2>Featured Services</h2>
-            <span class="small-label">Curated</span>
+          <div class="section-head">
+            <h2>Services</h2>
+            <span class="kicker">Popular</span>
           </div>
-          <div class="service-grid">
-            <div class="service-card">
-              <strong>Signature Beauty Visit</strong>
-              <p>A polished service section for top offers and customer favorites.</p>
-            </div>
-            <div class="service-card" id="booking">
-              <strong>Express Booking Flow</strong>
-              <p>Guide visitors from social media to booking in one tap.</p>
-            </div>
-            <div class="service-card">
-              <strong>Local Contact Hub</strong>
-              <p>Put phone, map, website, and social links in one mobile-friendly place.</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="section alt" id="menu">
-          <div class="section-heading">
-            <h2>Why This Works</h2>
-            <span class="small-label">Mobile first</span>
-          </div>
-          <div class="why-grid">
-            <div class="why-card">
-              <span>1</span>
-              <strong>Fewer missed customers</strong>
-            </div>
-            <div class="why-card">
-              <span>2</span>
-              <strong>Clearer mobile actions</strong>
-            </div>
-            <div class="why-card">
-              <span>3</span>
-              <strong>Better first impression</strong>
-            </div>
+          <div class="service-list">
+            <article class="service">
+              <div class="service-mark">G</div>
+              <div>
+                <strong>Gel Manicure</strong>
+                <p>Clean, glossy color with a long-lasting finish.</p>
+              </div>
+            </article>
+            <article class="service">
+              <div class="service-mark">S</div>
+              <div>
+                <strong>Spa Pedicure</strong>
+                <p>Relaxing foot care with polish and smooth finishing.</p>
+              </div>
+            </article>
+            <article class="service">
+              <div class="service-mark">N</div>
+              <div>
+                <strong>Nail Art</strong>
+                <p>Custom details, seasonal styles, and statement looks.</p>
+              </div>
+            </article>
+            <article class="service">
+              <div class="service-mark">L</div>
+              <div>
+                <strong>Lash & Brow</strong>
+                <p>Simple beauty add-ons for a polished visit.</p>
+              </div>
+            </article>
           </div>
         </section>
 
-        <section class="section" id="instagram">
-          <div class="section-heading">
-            <h2>Preview Use Cases</h2>
-            <span class="small-label">Flexible</span>
+        <section class="section soft" id="booking">
+          <div class="section-head">
+            <h2>Why clients love it</h2>
+            <span class="kicker">Easy</span>
           </div>
-          <div class="use-cases">
-            <span class="chip">Nail salons</span>
-            <span class="chip">Beauty studios</span>
-            <span class="chip">Barbers</span>
-            <span class="chip">Restaurants</span>
-            <span class="chip">Local service businesses</span>
+          <div class="trust-grid">
+            <div class="trust"><span>1</span><strong>Easy booking</strong></div>
+            <div class="trust"><span>2</span><strong>Clear service menu</strong></div>
+            <div class="trust"><span>3</span><strong>Map and contact in one tap</strong></div>
+            <div class="trust"><span>4</span><strong>Better mobile first impression</strong></div>
           </div>
         </section>
 
-        <section class="section alt" id="map">
-          <div class="section-heading">
-            <h2>Booking, Map & Google</h2>
+        <section class="section" id="location">
+          <div class="section-head">
+            <h2>Visit & Contact</h2>
+            <span class="kicker">Open</span>
           </div>
-          <p class="booking-note">
-            Keep the most important customer actions close together: booking, services,
-            Instagram, Google map directions, Website, and direct contact.
-          </p>
+          <div class="info-list">
+            <div class="info-row"><span>Today</span><strong>10:00 AM - 7:00 PM</strong></div>
+            <div class="info-row"><span>Location</span><strong>Austin, TX</strong></div>
+            <div class="info-row"><span>Response</span><strong>Usually replies within 1 business day</strong></div>
+          </div>
+        </section>
+
+        <section class="section soft" id="gallery">
+          <div class="section-head">
+            <h2>Studio Mood</h2>
+            <span class="kicker">Gallery</span>
+          </div>
+          <div class="mood-grid">
+            <div class="swatch soft-pink"><span>Soft pink</span></div>
+            <div class="swatch nude-gloss"><span>Nude gloss</span></div>
+            <div class="swatch champagne"><span>Champagne</span></div>
+            <div class="swatch deep-green"><span>Deep green accent</span></div>
+          </div>
         </section>
 
         <section class="final-cta" id="contact">
-          <h2>Want a page like this for your business?</h2>
+          <h2>Want a mobile page like this for your business?</h2>
           <p>
-            Turn social profile visits into clearer customer actions with a custom mobile page
-            shaped around your brand, services, and local presence.
+            Turn social profile visitors into clearer customer actions with one clean mobile page.
           </p>
-          <a class="cta-button" href="mailto:hello@demobeautystudio.co">Request a custom version</a>
+          <a class="cta-button" href="mailto:hello@example.com">Request a custom version</a>
         </section>
 
-        <div class="micro-footer">
-          Demo Beauty Studio - Clean mobile link page for local businesses
+        <div class="footer-note" id="instagram">
+          Built for local business traffic from Instagram, Google, TikTok, maps, and contact searches.
         </div>
       </article>
     </main>
